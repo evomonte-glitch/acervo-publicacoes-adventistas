@@ -20,3 +20,15 @@ Consulta realizada em 13/10/2026. As descrições foram resumidas/parafraseadas 
 - As capas localizadas correspondem às edições/formato indicados, não são imagens universais do título. Uma capa para Mensageiros da Esperança não foi associada ao PDF sem confirmar direitos e identidade como capa editorial.
 - A plataforma carrega as capas por URL remota para evitar redistribuir arquivos de imagem sem licença confirmada. O site da editora pode alterar as URLs ou impedir hotlink.
 - Os registros “Vida de Jesus” e eventuais outras fichas não listadas acima continuam pendentes; não foram apresentados como verificados.
+
+## Títulos adicionais incluídos na interface atual
+
+A consulta à página oficial [CPB mais — Magabooks](https://mais.cpb.com.br/downloads-magabooks/) confirma entradas e descrições editoriais para os títulos abaixo. A página serve materiais de divulgação e não necessariamente fornece ISBN, ficha completa ou estoque. Onde não localizei autoria/edição, a interface diz isso explicitamente.
+
+- **21 Dias para Mudar** — página CPB de Magabooks; resumo da apresentação editorial e aviso para não interpretar como validação clínica.
+- **Revolucione seu Futuro** — página CPB de Magabooks; a descrição aborda hábitos, saúde física/emocional e vida profissional.
+- **Mente Positiva** — página CPB de Magabooks; a descrição editorial menciona autoajuda e recomenda acompanhamento profissional em caso de transtornos. Isso não é avaliação científica do método.
+- **O Amanhã Começa Hoje** — página CPB de Magabooks; a apresentação editorial aborda potencial pessoal e desenvolvimento de virtudes.
+- **Vida de Jesus** — página CPB de Magabooks; descrição editorial de narrativa da vida de Jesus baseada nos Evangelhos. Autoria/edição não identificadas nessa página consultada.
+
+Nenhum valor da tabela fornecida no exemplo foi publicado no site. A pesquisa não encontrou confirmação pública oficial da tabela SELS 2026/2027 citada nem documentação dos valores apresentados; por isso, o preço permanece marcado como não localizado.

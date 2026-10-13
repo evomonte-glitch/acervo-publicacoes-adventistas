@@ -1,1 +1,67 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Catálogo independente de publicações adventistas"><title>Acervo — Publicações Adventistas</title><link rel="stylesheet" href="styles.css"></head><body><header><a class="brand" href="#">A<span>cervo.</span><small>PUBLICAÇÕES ADVENTISTAS</small></a><nav><a href="#catalogo">Catálogo</a><a href="#sobre">Sobre</a></nav><button id="login">Entrar ↗</button></header><main><section class="hero"><div><small class="eyebrow">CONHECIMENTO QUE TRANSFORMA</small><h1>Histórias e ideias<br>que <i>inspiram.</i></h1><p>Explore publicações que alimentam a fé, ampliam o conhecimento e aproximam pessoas.</p><form id="search"><input id="q" placeholder="Título, autor ou assunto..." aria-label="Buscar no catálogo"><button>→</button></form></div><div class="hero-art"><div class="sun"></div><div class="book book-a">CAMINHO<br>A CRISTO<small>ELLEN G. WHITE</small></div><div class="book book-b">O GRANDE<br>CONFLITO<small>ELLEN G. WHITE</small></div></div></section><section id="destaques"><div class="heading"><div><small class="eyebrow">SELEÇÃO DO ACERVO</small><h2>Leituras em destaque</h2></div><div><button id="prev" aria-label="Livros anteriores">←</button> <button id="next" aria-label="Próximos livros">→</button></div></div><div class="row" id="featured" tabindex="0" aria-label="Destaques, navegue com as setas"></div></section><section id="catalogo"><small class="eyebrow">EXPLORE O ACERVO</small><h2>Encontre sua próxima leitura</h2><p class="intro">Publicações para inspirar, ensinar e transformar.</p><div class="filters"><input id="filter" placeholder="Buscar título, autor ou assunto" aria-label="Buscar"><select id="category"><option value="">Todas as categorias</option></select><select id="author"><option value="">Todos os autores</option></select><button id="clear">Limpar</button></div><p id="count"></p><div class="grid" id="books"></div></section><section class="banner"><div>✳</div><section><small>PARA QUEM LEVA ESPERANÇA</small><h2>Materiais para o Ministério de Publicações</h2><p>Guias e recursos de apoio para colportores e equipes.</p></section><a href="#catalogo">Explorar materiais →</a></section><section id="sobre"><small class="eyebrow">SOBRE A PLATAFORMA</small><h2>Um acervo para descobrir e compartilhar.</h2><p>O Acervo organiza informações bibliográficas sobre livros, autores e materiais relacionados ao Ministério de Publicações adventista. É uma iniciativa independente, sem vínculo ou endosso institucional da Igreja Adventista do Sétimo Dia. Consulte as fontes de cada registro para confirmar informações e disponibilidade.</p></section></main><footer><a class="brand" href="#">Acervo.</a><span>Uma biblioteca para boas histórias.</span><a href="mailto:contato@acervo.example">Contato</a><a href="#sobre">Privacidade</a><small>© 2026 Acervo · Iniciativa independente</small></footer><dialog id="detail"><button class="close" id="close">×</button><div id="content"></div></dialog><dialog id="auth"><button class="close" id="closeAuth">×</button><small class="eyebrow">SUA BIBLIOTECA PESSOAL</small><h2>Entre no Acervo</h2><p>Autenticação estará disponível após configurar o provedor e o banco de dados.</p></dialog><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B192C">
+  <meta name="description" content="Catálogo independente de livros e materiais relacionados ao Ministério de Publicações adventista.">
+  <title>Acervo | Publicações Adventistas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { navy: { 900: '#0B192C', 800: '#1E3E62' } } } } };
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+<header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#inicio" onclick="mudarAba('inicio');return false" class="flex items-center space-x-3" aria-label="Acervo, início">
+      <span class="w-10 h-10 rounded-lg bg-navy-900 flex items-center justify-center text-white font-bold text-lg">A.</span>
+      <span><b class="font-bold text-lg text-slate-900 block leading-tight">Acervo de Publicações</b><small class="text-xs text-slate-500 tracking-wider uppercase">Iniciativa independente</small></span>
+    </a>
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700" aria-label="Navegação principal">
+      <button onclick="mudarAba('inicio')" class="hover:text-navy-800 transition-colors">Início</button>
+      <button onclick="mudarAba('catalogo')" class="hover:text-navy-800 transition-colors">Catálogo</button>
+      <button onclick="mudarAba('sobre')" class="hover:text-navy-800 transition-colors">Sobre o projeto</button>
+    </nav>
+    <button onclick="abrirLogin()" class="px-4 py-2 text-sm font-medium text-navy-900 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">Entrar</button>
+  </div>
+</header>
+<main class="flex-grow">
+  <section id="aba-inicio" class="space-y-14 pb-16">
+    <section class="bg-gradient-to-b from-navy-900 via-navy-800 to-slate-900 text-white py-20 sm:py-24 px-4 text-center">
+      <div class="max-w-4xl mx-auto space-y-6">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-blue-300/30 text-xs font-semibold tracking-wide text-blue-100">Catálogo independente · fontes editoriais identificadas</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Publicações para <span class="text-amber-400">inspirar e ensinar</span></h1>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">Descubra livros e materiais relacionados ao Ministério de Publicações adventista. Consulte as fontes e confirme os dados da edição que procura.</p>
+        <form id="form-busca-home" class="max-w-2xl mx-auto mt-8 flex items-center bg-white rounded-xl shadow-2xl p-2 border border-slate-200" role="search">
+          <label class="sr-only" for="input-busca-home">Pesquisar por título, autor ou tema</label>
+          <input type="search" id="input-busca-home" placeholder="Pesquisar por título, autor ou tema..." class="w-full px-4 py-3 text-slate-800 bg-transparent focus:outline-none text-sm sm:text-base">
+          <button class="bg-navy-900 hover:bg-navy-800 text-white px-5 sm:px-6 py-3 rounded-lg font-medium transition-colors text-sm sm:text-base flex-shrink-0">Pesquisar</button>
+        </form>
+        <p class="text-xs text-blue-100/80">Preços SELS e disponibilidade não exibidos sem uma tabela regional vigente e verificável.</p>
+      </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="flex justify-between items-end mb-7 gap-4"><div><h2 class="text-2xl font-bold text-slate-900">Destaques do acervo</h2><p class="text-sm text-slate-500 mt-1">Fichas com referência editorial identificada.</p></div><button onclick="mudarAba('catalogo')" class="text-sm font-semibold text-navy-800 hover:text-navy-900 whitespace-nowrap">Ver catálogo →</button></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-destaques"></div>
+    </section>
+  </section>
+  <section id="aba-catalogo" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-7">
+    <div><span class="text-xs uppercase tracking-widest font-semibold text-amber-700">Publicações identificadas</span><h1 class="text-3xl font-bold text-slate-900 mt-2">Catálogo de publicações</h1><p class="text-sm text-slate-500 mt-2 max-w-3xl">Amostra pesquisável, não uma lista completa do catálogo oficial. Descrições são editoriais. Preço SELS, estoque e região: informação não localizada em fonte pública vigente verificável.</p></div>
+    <div class="flex flex-col sm:flex-row gap-3"><label class="sr-only" for="filtro-catalogo">Filtrar publicações</label><input type="search" id="filtro-catalogo" oninput="filtrarCatalogo()" placeholder="Filtrar por título, autor ou categoria..." class="flex-grow px-4 py-3 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-800"><label class="sr-only" for="filtro-categoria">Categoria</label><select id="filtro-categoria" onchange="filtrarCatalogo()" class="px-4 py-3 bg-white border border-slate-200 rounded-xl text-sm text-slate-700"><option value="">Todas as categorias</option></select></div>
+    <p id="resultado-contagem" class="text-xs text-slate-500"></p><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-catalogo"></div>
+  </section>
+  <section id="aba-sobre" class="hidden max-w-4xl mx-auto px-4 sm:px-6 py-16 space-y-6">
+    <span class="text-xs uppercase tracking-widest font-semibold text-amber-700">Sobre o projeto</span><h1 class="text-3xl font-bold text-slate-900">Uma biblioteca para descobrir e consultar</h1>
+    <p class="text-slate-600 leading-relaxed">O Acervo organiza referências bibliográficas sobre livros, autores e materiais relacionados ao Ministério de Publicações adventista. É uma iniciativa independente e não representa nem é endossada oficialmente pela Igreja Adventista do Sétimo Dia.</p>
+    <p class="text-slate-600 leading-relaxed">Os registros atuais são uma amostra e não comprovam cobertura completa do catálogo vigente. As descrições identificadas como editoriais resumem o que a editora informa; não são avaliações independentes da eficácia das recomendações. Preços e disponibilidade dependem da região e da atualização da tabela SELS, que não foi confirmada para os valores apresentados no exemplo.</p>
+    <p class="text-slate-600 leading-relaxed">Capas são exibidas apenas quando a correspondência da imagem com a edição foi confirmada. Os arquivos de imagem continuam hospedados pela CPB; consulte a fonte e as condições de uso.</p>
+    <a href="FONTES.md" class="inline-flex text-navy-800 font-semibold underline">Consultar fontes e edições documentadas</a>
+  </section>
+</main>
+<footer class="bg-slate-900 text-slate-400 py-9 border-t border-slate-800 mt-auto"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row gap-3 justify-between items-center text-xs"><span>© 2026 Acervo · Iniciativa independente</span><span>Fontes, edições e limitações documentadas no projeto</span><a href="mailto:contato@acervo.example" class="hover:text-white">Contato</a></div></footer>
+<dialog id="dialog-detalhe" class="w-[min(42rem,calc(100%-2rem))] rounded-2xl p-0 shadow-2xl backdrop:bg-slate-950/60"><div id="conteudo-detalhe" class="p-6 sm:p-8"></div></dialog>
+<dialog id="dialog-login" class="w-[min(26rem,calc(100%-2rem))] rounded-2xl p-7 shadow-2xl backdrop:bg-slate-950/60"><button onclick="document.getElementById('dialog-login').close()" class="float-right text-2xl text-slate-500" aria-label="Fechar">×</button><span class="text-xs uppercase tracking-widest font-semibold text-amber-700">Conta pessoal</span><h2 class="text-2xl font-bold text-navy-900 mt-2">Entrar no Acervo</h2><p class="text-sm leading-relaxed text-slate-600 mt-3">A autenticação ainda não está configurada. Nenhum dado de login será solicitado ou armazenado nesta versão.</p></dialog>
+<script src="app.js"></script>
+</body>
+</html>
